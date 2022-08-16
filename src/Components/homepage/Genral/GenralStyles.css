@@ -1,0 +1,193 @@
+/*********************************************************************************************************************************************************************/
+/* buttons top and bottom borders and filled and outlined and big-btn */
+/*********************************************************************************************************************************************************************/
+/* color #6f90b6 */
+/* color hover #2e4e78 */
+.topbuttom {
+    font-size: 1.5rem;
+    padding: 12px 50px;
+    border: none;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.topbuttom:hover {
+    transition: 0.2s;
+    border-radius: 0.25rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.filled {
+    background-color: #6f90b6;
+    color: #fff;
+    border: 1px solid #2e4e78 !important;
+}
+.filled:hover {
+    background-color: #2e4e7800;
+    color: #2e4e78;
+}
+
+.outlined {
+    background-color: #6f90b600;
+    color: #2e4e78;
+    border: 1px solid #2e4e78;
+}
+.outlined:hover {
+    background-color: #2e4e78;
+    color: #fff;
+    border: 1px solid #2e4e78 !important;
+}
+
+.black-btn {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
+
+.big-btn {
+    width: 50%;
+    height: 3.8rem;
+    background-color: #6f90b6;
+    border: 3px solid #2e4e78;
+    color: #fff;
+}
+
+.big-btn:hover {
+    transition: 0.2s;
+    color: #2e4e78;
+    background-color: #fff;
+    border: 3px solid #2e4e78;
+}
+
+.no-border-top,
+.no-border-top:hover {
+    border-top: none;
+}
+/*********************************************************************************************************************************************************************/
+/* custom container */
+/*********************************************************************************************************************************************************************/
+.custom-container {
+    margin: 20px auto 150px;
+}
+
+/*********************************************************************************************************************************************************************/
+/* Type Of the section the heading and the view all */
+/*********************************************************************************************************************************************************************/
+.type-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+span {
+    position: relative;
+}
+
+.red-thick-line {
+    border-top: 10px solid #6f90b6;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    width: 100%;
+    z-index: -1;
+}
+.type-container p {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.type-container p:hover {
+    transition: 0.2s;
+    color: #6f90b6;
+}
+
+/*********************************************************************************************************************************************************************/
+/* product status style New Sale ... */
+/*********************************************************************************************************************************************************************/
+.product-status {
+    position: absolute;
+    padding: 15px 25px;
+    border-radius: 100%;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    min-width: 20px;
+    right: 50px;
+    transition: 0.2s;
+}
+
+.product-status p {
+    margin: 0;
+    font-size: 15px !important;
+}
+
+/*********************************************************************************************************************************************************************/
+/* product card style */
+/*********************************************************************************************************************************************************************/
+.product-card {
+    text-align: center;
+    background-color: #fafafa;
+    position: relative;
+    border: #dadada solid 1px;
+    transition: 0.2s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Big-card {
+    padding: 2rem 4rem;
+}
+
+.Small-card {
+    padding: 2rem 2rem;
+}
+
+.product-card:hover {
+    background-color: #fff;
+    border-color: #000;
+    box-shadow: 4px 14px 40px #afafaf;
+}
+
+.product-card div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card h4 {
+    font-weight: 700;
+    z-index: 2;
+}
+
+.product-card p {
+    font-size: large;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.product-card img {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.img-big {
+    padding: 80px 0;
+}
+.img-small {
+    padding: 30px 0;
+}
+
+.best {
+    background-color: #919191;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}

@@ -1,0 +1,27 @@
+.cover {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    overflow-y: hidden;
+}
+
+.cover img {
+    width: 100%;
+}
+
+.FloatingDataCover {
+    position: absolute;
+    top: 40%;
+    left: 6%;
+}
+
+.FloatingDataCover h1 {
+    font-size: 6rem;
+    font-weight: 700;
+}
+.FloatingDataCover p {
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.801);
+}
