@@ -1,0 +1,60 @@
+/* color #6f90b6 */
+/* color hover #2e4e78 */
+.sign-btn {
+    background-color: #2e4e78;
+    color: #fff;
+    border: 3px solid #2e4e78;
+}
+
+.sign-btn:hover {
+    background-color: #fff;
+    color: #2e4e78;
+    border: 3px solid #2e4e78;
+}
+
+.form {
+    width: 40%;
+    margin: 70px 140px;
+    padding: 30px;
+    background-color: #fffffff2;
+}
+
+.happy-background {
+    background-image: url("../../Images/background.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.form a {
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.form a:hover {
+    color: #6f90b6;
+}
+
+.sign-div div {
+    width: 100%;
+}
+
+#country-select-demo {
+    width: 0;
+}
+
+#show-pass {
+    text-align: end;
+    width: 15%;
+}
+
+#show-login-pass {
+    text-align: end;
+    width: 7%;
+}
+
+.MuiAutocomplete-endAdornment {
+    text-align: end;
+}

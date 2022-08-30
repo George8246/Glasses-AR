@@ -1,38 +1,138 @@
+/* React Styles */
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Genral Styles To the hole web site */
+body {
+    overflow-x: hidden;
+    font-family: "Playfair Display", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+}
+
+.container-fluid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.big-margin {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.overFlow-hidden {
+    overflow: hidden;
+}
+
+.navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between !important;
+}
+
+.space-around {
+    justify-content: space-around !important;
+}
+
+.all-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.float-l {
+    float: left;
+}
+.float-r {
+    float: right;
+}
+
+.fitted-div {
+    width: fit-content !important;
+}
+
+.pm-30 {
+    padding: 40px !important;
+    margin: 30px !important;
+}
+
+.container-div {
+    border: #cfcfcf solid 1px;
+    border-radius: 10px;
+}
+
+.ml-0 {
+    margin-right: 0 !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+@media only screen and (max-width: 420px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }

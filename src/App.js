@@ -1,23 +1,40 @@
 import "./App.css";
-import Navbar from "./Components/homepage/Navbar/Navbar";
-import Cover from "./Components/homepage/Cover/Cover";
-import Arrival from "./Components/homepage/Products/NewArivals";
-import TopSelling from "./Components/homepage/Products/TopSelling";
-import Sale from "./Components/homepage/Products/Sale";
-import Contact from "./Components/homepage/Footer/Contact";
-import Footer from "./Components/homepage/Footer/Footer";
+import Home from "./Components/homepage/Home";
+import ProductView from "./Components/ViewProducts/ViewProductDetails/ProductViewDetails";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./Components/ScrollTopTop";
+import DisplayProducts from "./Components/ViewProducts/DisplayProducts/DisplayProducts";
+import SignIn from "./Components/SignIn-SignOut/SignIn";
+import SignUp from "./Components/SignIn-SignOut/SignUp";
+import Navbar from "./Components/BasicComponents/Navbar/Navbar";
 
 function App() {
     return (
-        <div>
-            <Navbar />
-            <Cover />
-            <Arrival />
-            <TopSelling />
-            <Sale />
-            <Contact />
-            <Footer />
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/display-products">
+                    <Navbar />
+                    <DisplayProducts />
+                </Route>
+                <Route name="/view-product" path="/:id">
+                    <Navbar />
+                    <ProductView />
+                </Route>
+                <Route exact path="/sign-in">
+                    <Navbar status="SignIn" />
+                    <SignIn />
+                </Route>
+                <Route exact path="/sign-up">
+                    <Navbar status="SignUp" />
+                    <SignUp />
+                </Route>
+                <Route exact path="/">
+                    <Navbar />
+                    <Home />
+                </Route>
+            </Switch>
+            <ScrollToTop smooth />
+        </Router>
     );
 }
 

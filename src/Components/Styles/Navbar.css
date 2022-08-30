@@ -1,0 +1,67 @@
+nav {
+    transition: 0.2s;
+    z-index: 100;
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-between;
+}
+
+nav a:hover {
+    color: #000 !important;
+}
+
+.navbar-brand {
+    color: #2e4e78 !important;
+}
+
+.white-anchor {
+    color: #fff !important;
+}
+
+.white-anchor:hover {
+    color: #6f90b6 !important;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+}
+
+.white-btn {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.Search {
+    border: 1px solid rgb(212, 212, 212);
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 30px;
+    border: 1px solid #6f90b6;
+    width: 70rem;
+    box-shadow: 1px 1px 10px #2e4e786a;
+    margin-left: 16px;
+}
+
+.Search:focus-visible {
+    outline: none;
+    border: 1px solid #6f90b6;
+    box-shadow: 1px 1px 10px #6f90b6;
+}
+
+.nameLetter {
+    background-color: #2e4e78;
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #2e4e78;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.nameLetter:hover {
+    background-color: #fff;
+    color: #2e4e78;
+    border: 1px solid #2e4e78;
+}
