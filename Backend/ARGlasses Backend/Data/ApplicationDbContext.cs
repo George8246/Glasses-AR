@@ -34,6 +34,12 @@ namespace AR_Glasses_Backend.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Product>()
+            .Property(p => p.CreatedAt)
+            .HasDefaultValue(new DateTime(2025, 3, 31));
+
+            modelBuilder.Seed(); // Seed data
+
             // Configure Product entity
             modelBuilder.Entity<Product>(entity =>
             {

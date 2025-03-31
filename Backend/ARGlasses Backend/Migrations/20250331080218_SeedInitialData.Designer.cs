@@ -4,6 +4,7 @@ using AR_Glasses_Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ARGlasses_Backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250331080218_SeedInitialData")]
+    partial class SeedInitialData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,16 +55,6 @@ namespace ARGlasses_Backend.Migrations
                         {
                             Id = 3,
                             Name = "Persol"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Gucci"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Prada"
                         });
                 });
 
@@ -90,21 +83,6 @@ namespace ARGlasses_Backend.Migrations
                         {
                             Id = 2,
                             Name = "Round"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Square"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Cat-Eye"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Wayfarer"
                         });
                 });
 
@@ -123,23 +101,6 @@ namespace ARGlasses_Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genders");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Male"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Female"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Unisex"
-                        });
                 });
 
             modelBuilder.Entity("ARGlasses_Backend.Models.Join.ProductFrameShape", b =>
@@ -165,12 +126,7 @@ namespace ARGlasses_Backend.Migrations
                         new
                         {
                             ProductId = new Guid("213d291f-9628-4bad-8387-8d980671dba0"),
-                            FrameShapeId = 3
-                        },
-                        new
-                        {
-                            ProductId = new Guid("3c4b2a9d-1e3f-4b2a-8c4b-2a9d1e3f4b2a"),
-                            FrameShapeId = 3
+                            FrameShapeId = 2
                         });
                 });
 
@@ -187,23 +143,6 @@ namespace ARGlasses_Backend.Migrations
                     b.HasIndex("GenderId");
 
                     b.ToTable("ProductGender");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductId = new Guid("689455ea-cfe1-406a-a50e-bf406b472fdf"),
-                            GenderId = 3
-                        },
-                        new
-                        {
-                            ProductId = new Guid("213d291f-9628-4bad-8387-8d980671dba0"),
-                            GenderId = 1
-                        },
-                        new
-                        {
-                            ProductId = new Guid("3c4b2a9d-1e3f-4b2a-8c4b-2a9d1e3f4b2a"),
-                            GenderId = 3
-                        });
                 });
 
             modelBuilder.Entity("ARGlasses_Backend.Models.Join.ProductMaterial", b =>
@@ -219,23 +158,6 @@ namespace ARGlasses_Backend.Migrations
                     b.HasIndex("MaterialId");
 
                     b.ToTable("ProductMaterial");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductId = new Guid("689455ea-cfe1-406a-a50e-bf406b472fdf"),
-                            MaterialId = 1
-                        },
-                        new
-                        {
-                            ProductId = new Guid("213d291f-9628-4bad-8387-8d980671dba0"),
-                            MaterialId = 2
-                        },
-                        new
-                        {
-                            ProductId = new Guid("3c4b2a9d-1e3f-4b2a-8c4b-2a9d1e3f4b2a"),
-                            MaterialId = 1
-                        });
                 });
 
             modelBuilder.Entity("ARGlasses_Backend.Models.Material", b =>
@@ -252,28 +174,6 @@ namespace ARGlasses_Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Materials");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Metal"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Plastic"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Acetate"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Titanium"
-                        });
                 });
 
             modelBuilder.Entity("ARGlasses_Backend.Models.Order", b =>
@@ -414,21 +314,21 @@ namespace ARGlasses_Backend.Migrations
                         {
                             Id = new Guid("689455ea-cfe1-406a-a50e-bf406b472fdf"),
                             BrandId = 1,
-                            CreatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Timeless aviator style with polarized lenses.",
                             Name = "Aviator Classic",
                             OnSale = false,
                             Price = 150.00m,
                             ProductTypeId = 1,
                             StockQuantity = 100,
-                            UpdatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedAt = new DateTime(2025, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Weight = 0.3m
                         },
                         new
                         {
                             Id = new Guid("213d291f-9628-4bad-8387-8d980671dba0"),
                             BrandId = 2,
-                            CreatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Modern rectangular frame with UV protection.",
                             Name = "Holbrook",
                             OnSale = true,
@@ -436,22 +336,8 @@ namespace ARGlasses_Backend.Migrations
                             ProductTypeId = 1,
                             SalePrice = 99.00m,
                             StockQuantity = 50,
-                            UpdatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedAt = new DateTime(2025, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Weight = 0.25m
-                        },
-                        new
-                        {
-                            Id = new Guid("3c4b2a9d-1e3f-4b2a-8c4b-2a9d1e3f4b2a"),
-                            BrandId = 1,
-                            CreatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Iconic square frame with a retro vibe.",
-                            Name = "Wayfarer",
-                            OnSale = false,
-                            Price = 130.00m,
-                            ProductTypeId = 1,
-                            StockQuantity = 75,
-                            UpdatedAt = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Weight = 0.28m
                         });
                 });
 
@@ -510,28 +396,8 @@ namespace ARGlasses_Backend.Migrations
                             ColorName = "Black",
                             Image360Url = "/images/360/aviator-black",
                             MainImageUrl = "/images/products/aviator-black.jpg",
-                            ProductId = new Guid("689455ea-cfe1-406a-a50e-bf406b472fdf"),
-                            SwatchImageUrl = "/images/swatches/black.png"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ARModelUrl = "/models/holbrook-matte-black.glb",
-                            ColorName = "Matte Black",
-                            Image360Url = "/images/360/holbrook-matte-black",
-                            MainImageUrl = "/images/products/holbrook-matte-black.jpg",
                             ProductId = new Guid("213d291f-9628-4bad-8387-8d980671dba0"),
-                            SwatchImageUrl = "/images/swatches/matte-black.png"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ARModelUrl = "/models/wayfarer-tortoise-shell.glb",
-                            ColorName = "Tortoise Shell",
-                            Image360Url = "/images/360/wayfarer-tortoise-shell",
-                            MainImageUrl = "/images/products/wayfarer-tortoise-shell.jpg",
-                            ProductId = new Guid("3c4b2a9d-1e3f-4b2a-8c4b-2a9d1e3f4b2a"),
-                            SwatchImageUrl = "/images/swatches/tortoise-shell.png"
+                            SwatchImageUrl = "/images/swatches/black.png"
                         });
                 });
 
