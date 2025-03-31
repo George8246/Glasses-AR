@@ -1,0 +1,6 @@
+@ARGlasses_Backend_HostAddress = http://localhost:5015
+
+GET {{ARGlasses_Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
