@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "react-error-boundary": "^5.0.0",
-    "react-router-dom": "^7.4.1"
-  }
-}
